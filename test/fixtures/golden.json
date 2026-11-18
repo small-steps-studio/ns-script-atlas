@@ -1,0 +1,818 @@
+{
+ "01-script-0.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | WorkflowActionScript |\n| Module scope | SameAccount |\n| Modules | 1 |\n| Entry points | onAction |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| onAction | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/format | format | no |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n3 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | es2015 | let needs @NApiVersion 2.1 |\n| 9 | es2015 | const needs @NApiVersion 2.1 |\n| 9 | es2015 | for...of needs @NApiVersion 2.1 |"
+  }
+ },
+ "02-script-1.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | ClientScript |\n| Module scope | - |\n| Modules | 6 |\n| Entry points | pageInit, fieldChanged, saveRecord, validateLine |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| pageInit | yes |\n| fieldChanged | yes |\n| postSourcing | no |\n| sublistChanged | no |\n| lineInit | no |\n| validateField | no |\n| validateLine | yes |\n| validateInsert | no |\n| validateDelete | no |\n| saveRecord | yes |\n| localizationContextEnter | no |\n| localizationContextExit | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/https | https | yes |\n| N/ui/serverWidget | serverWidget | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n4 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | loop_call | record.submitFields inside a loop; every call uses governance units |\n| 12 | loop_call | search.lookupFields inside a loop; every call uses governance units |\n| 31 | loop_call | record.load inside a loop; every call uses governance units |\n| 41 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n3 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 15 | es2015 | const needs @NApiVersion 2.1 |\n| 15 | es2015 | for...of needs @NApiVersion 2.1 |\n| 42 | es2015 | class needs @NApiVersion 2.1 |"
+  }
+ },
+ "03-script-2.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | Restlet |\n| Module scope | - |\n| Modules | 5 |\n| Entry points | get, put, delete |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| get | yes |\n| put | yes |\n| post | no |\n| delete | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/https | https | yes |\n| N/email | email | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | loop_call | record.load inside a loop; every call uses governance units |\n| 24 | loop_call | record.load inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "04-script-3.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | MapReduceScript |\n| Module scope | - |\n| Modules | 4 |\n| Entry points | getInputData, map, summarize |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| getInputData | yes |\n| map | yes |\n| reduce | no |\n| summarize | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/runtime | runtime | no |\n| N/email | email | yes |\n| N/ui/serverWidget | serverWidget | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n3 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | email.send inside a loop; every call uses governance units |\n| 27 | loop_call | search.lookupFields inside a loop; every call uses governance units |\n| 31 | loop_call | email.send inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "05-script-4.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | UserEventScript |\n| Module scope | - |\n| Modules | 5 |\n| Entry points | beforeLoad |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeLoad | yes |\n| beforeSubmit | no |\n| afterSubmit | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | no |\n| N/runtime | runtime | no |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n4 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | loop_call | record.load inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "06-script-5.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | SDFInstallationScript |\n| Module scope | - |\n| Modules | 2 |\n| Entry points | run |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| run | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | no |\n| N/runtime | runtime | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n3 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 7 | es2015 | const needs @NApiVersion 2.1 |\n| 9 | es2015 | let needs @NApiVersion 2.1 |\n| 9 | es2015 | spread needs @NApiVersion 2.1 |"
+  }
+ },
+ "07-script-6.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | Restlet |\n| Module scope | - |\n| Modules | 6 |\n| Entry points | get, put, delete |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| get | yes |\n| put | yes |\n| post | no |\n| delete | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/https | https | yes |\n| N/email | email | yes |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 22 | loop_call | email.send inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | es2015 | let needs @NApiVersion 2.1 |\n| 8 | es2015 | spread needs @NApiVersion 2.1 |"
+  }
+ },
+ "08-script-7.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | Portlet |\n| Module scope | - |\n| Modules | 5 |\n| Entry points | render |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| render | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | no |\n| N/log | log | yes |\n| N/email | email | no |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n4 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "09-script-8.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | MapReduceScript |\n| Module scope | SameAccount |\n| Modules | 5 |\n| Entry points | getInputData, map, summarize |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| getInputData | yes |\n| map | yes |\n| reduce | no |\n| summarize | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/email | email | yes |\n| N/format | format | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n4 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | record.submitFields inside a loop; every call uses governance units |\n| 26 | loop_call | record.submitFields inside a loop; every call uses governance units |\n| 29 | loop_call | email.send inside a loop; every call uses governance units |\n| 32 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n3 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 19 | es2015 | const needs @NApiVersion 2.1 |\n| 19 | es2015 | for...of needs @NApiVersion 2.1 |\n| 33 | es2015 | arrow function needs @NApiVersion 2.1 |"
+  }
+ },
+ "10-script-9.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | ClientScript |\n| Module scope | TargetAccount |\n| Modules | 3 |\n| Entry points | pageInit, fieldChanged, saveRecord |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| pageInit | yes |\n| fieldChanged | yes |\n| postSourcing | no |\n| sublistChanged | no |\n| lineInit | no |\n| validateField | no |\n| validateLine | no |\n| validateInsert | no |\n| validateDelete | no |\n| saveRecord | yes |\n| localizationContextEnter | no |\n| localizationContextExit | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/log | log | yes |\n| N/format | format | no |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | record.load inside a loop; every call uses governance units |\n| 18 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "11-script-10.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | BundleInstallationScript |\n| Module scope | TargetAccount |\n| Modules | 5 |\n| Entry points | afterInstall, beforeUpdate |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeInstall | no |\n| afterInstall | yes |\n| beforeUpdate | yes |\n| afterUpdate | no |\n| beforeUninstall | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/https | https | yes |\n| N/email | email | yes |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n4 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |\n| 14 | loop_call | email.send inside a loop; every call uses governance units |\n| 24 | loop_call | search.lookupFields inside a loop; every call uses governance units |\n| 28 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "12-script-11.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | BundleInstallationScript |\n| Module scope | SameAccount |\n| Modules | 4 |\n| Entry points | afterInstall |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeInstall | no |\n| afterInstall | yes |\n| beforeUpdate | no |\n| afterUpdate | no |\n| beforeUninstall | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/email | email | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 13 | es2015 | const needs @NApiVersion 2.1 |\n| 13 | es2015 | for...of needs @NApiVersion 2.1 |"
+  }
+ },
+ "13-script-12.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | SDFInstallationScript |\n| Module scope | TargetAccount |\n| Modules | 3 |\n| Entry points | run |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| run | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/runtime | runtime | no |\n| N/email | email | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | record.load inside a loop; every call uses governance units |\n| 13 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "14-script-13.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | UserEventScript |\n| Module scope | SameAccount |\n| Modules | 6 |\n| Entry points | beforeLoad |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeLoad | yes |\n| beforeSubmit | no |\n| afterSubmit | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/runtime | runtime | no |\n| N/https | https | no |\n| N/email | email | yes |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n4 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 11 | loop_call | email.send inside a loop; every call uses governance units |\n| 14 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "15-script-14.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | ScheduledScript |\n| Module scope | - |\n| Modules | 3 |\n| Entry points | execute |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| execute | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | no |\n| N/log | log | yes |\n| N/email | email | yes |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | loop_call | email.send inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 12 | es2015 | const needs @NApiVersion 2.1 |\n| 12 | es2015 | template literal needs @NApiVersion 2.1 |"
+  }
+ },
+ "16-script-15.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | Portlet |\n| Module scope | - |\n| Modules | 5 |\n| Entry points | render |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| render | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/https | https | no |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n4 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "17-script-16.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | WorkflowActionScript |\n| Module scope | - |\n| Modules | 6 |\n| Entry points | onAction |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| onAction | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | no |\n| N/runtime | runtime | no |\n| N/https | https | yes |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n4 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "18-script-17.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | Portlet |\n| Module scope | - |\n| Modules | 3 |\n| Entry points | render |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| render | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/log | log | yes |\n| N/email | email | no |\n| N/ui/serverWidget | serverWidget | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | es2015 | let needs @NApiVersion 2.1 |\n| 8 | es2015 | spread needs @NApiVersion 2.1 |"
+  }
+ },
+ "19-script-18.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | BundleInstallationScript |\n| Module scope | - |\n| Modules | 5 |\n| Entry points | afterInstall, beforeUpdate |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeInstall | no |\n| afterInstall | yes |\n| beforeUpdate | yes |\n| afterUpdate | no |\n| beforeUninstall | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/https | https | yes |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | search.lookupFields inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "20-script-19.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | Suitelet |\n| Module scope | - |\n| Modules | 4 |\n| Entry points | onRequest |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| onRequest | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/email | email | no |\n| N/format | format | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | loop_call | search.lookupFields inside a loop; every call uses governance units |\n| 12 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "21-script-20.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | SDFInstallationScript |\n| Module scope | - |\n| Modules | 5 |\n| Entry points | run |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| run | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | loop_call | record.submitFields inside a loop; every call uses governance units |\n| 11 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 7 | es2015 | let needs @NApiVersion 2.1 |\n| 15 | es2015 | spread needs @NApiVersion 2.1 |"
+  }
+ },
+ "22-script-21.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | BundleInstallationScript |\n| Module scope | SameAccount |\n| Modules | 5 |\n| Entry points | afterInstall |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeInstall | no |\n| afterInstall | yes |\n| beforeUpdate | no |\n| afterUpdate | no |\n| beforeUninstall | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/log | log | yes |\n| N/email | email | no |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n3 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | loop_call | record.load inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "23-script-22.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | Portlet |\n| Module scope | TargetAccount |\n| Modules | 2 |\n| Entry points | render |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| render | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/runtime | runtime | no |\n| N/format | format | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "24-script-23.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | UserEventScript |\n| Module scope | - |\n| Modules | 7 |\n| Entry points | beforeLoad |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeLoad | yes |\n| beforeSubmit | no |\n| afterSubmit | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | no |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/email | email | no |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n5 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "25-usereventscript.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | UserEventScript |\n| Module scope | SameAccount |\n| Modules | 4 |\n| Entry points | beforeLoad, afterSubmit |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeLoad | yes |\n| beforeSubmit | no |\n| afterSubmit | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/https | https | no |\n| N/email | email | yes |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n3 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | email.send inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "26-clientscript.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | ClientScript |\n| Module scope | - |\n| Modules | 5 |\n| Entry points | pageInit, fieldChanged, saveRecord, validateLine |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| pageInit | yes |\n| fieldChanged | yes |\n| postSourcing | no |\n| sublistChanged | no |\n| lineInit | no |\n| validateField | no |\n| validateLine | yes |\n| validateInsert | no |\n| validateDelete | no |\n| saveRecord | yes |\n| localizationContextEnter | no |\n| localizationContextExit | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/https | https | no |\n| N/email | email | yes |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n5 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | loop_call | email.send inside a loop; every call uses governance units |\n| 18 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |\n| 26 | loop_call | search.lookupFields inside a loop; every call uses governance units |\n| 30 | loop_call | email.send inside a loop; every call uses governance units |\n| 40 | loop_call | email.send inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "27-scheduledscript.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | ScheduledScript |\n| Module scope | SameAccount |\n| Modules | 1 |\n| Entry points | execute |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| execute | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/https | https | yes |\n\nEvery module is used."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "28-mapreducescript.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | MapReduceScript |\n| Module scope | - |\n| Modules | 4 |\n| Entry points | getInputData, map, reduce, summarize |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| getInputData | yes |\n| map | yes |\n| reduce | yes |\n| summarize | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/runtime | runtime | no |\n| N/email | email | no |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n4 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 18 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "29-suitelet.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | Suitelet |\n| Module scope | - |\n| Modules | 8 |\n| Entry points | onRequest |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| onRequest | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | no |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/https | https | no |\n| N/email | email | yes |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n5 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 8 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |\n| 13 | loop_call | email.send inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "30-restlet.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | Restlet |\n| Module scope | SameAccount |\n| Modules | 3 |\n| Entry points | get, post, delete |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| get | yes |\n| put | no |\n| post | yes |\n| delete | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/email | email | yes |\n| N/ui/serverWidget | serverWidget | no |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n3 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |\n| 19 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |\n| 30 | loop_call | email.send inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "31-portlet.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | Portlet |\n| Module scope | TargetAccount |\n| Modules | 4 |\n| Entry points | render |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| render | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | no |\n| N/log | log | yes |\n| N/format | format | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | record.load inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 13 | es2015 | const needs @NApiVersion 2.1 |\n| 13 | es2015 | template literal needs @NApiVersion 2.1 |"
+  }
+ },
+ "32-massupdatescript.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | MassUpdateScript |\n| Module scope | TargetAccount |\n| Modules | 2 |\n| Entry points | each |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| each | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/runtime | runtime | no |\n| N/https | https | yes |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "33-workflowactionscript.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.x |\n| Script type | WorkflowActionScript |\n| Module scope | TargetAccount |\n| Modules | 2 |\n| Entry points | onAction |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| onAction | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/https | https | yes |\n| N/format | format | no |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n2 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 11 | es2015 | arrow function needs @NApiVersion 2.1 |\n| 11 | es2015 | const needs @NApiVersion 2.1 |"
+  }
+ },
+ "34-bundleinstallationscript.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | BundleInstallationScript |\n| Module scope | SameAccount |\n| Modules | 5 |\n| Entry points | afterInstall, beforeUpdate |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeInstall | no |\n| afterInstall | yes |\n| beforeUpdate | yes |\n| afterUpdate | no |\n| beforeUninstall | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | yes |\n| N/email | email | yes |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n5 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 9 | loop_call | record.load inside a loop; every call uses governance units |\n| 10 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |\n| 15 | loop_call | email.send inside a loop; every call uses governance units |\n| 25 | loop_call | record.submitFields inside a loop; every call uses governance units |\n| 27 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "35-sdfinstallationscript.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | SDFInstallationScript |\n| Module scope | TargetAccount |\n| Modules | 2 |\n| Entry points | run |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| run | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/format | format | no |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | search.lookupFields inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "36-bad-entry-point.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | UserEventScript |\n| Module scope | SameAccount |\n| Modules | 4 |\n| Entry points | beforeLoad, beforeSubmit, afterSubmit, onSubmit |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| beforeLoad | yes |\n| beforeSubmit | yes |\n| afterSubmit | yes |\n\nonSubmit is not an entry point of UserEventScript."
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | yes |\n| N/runtime | runtime | no |\n| N/ui/serverWidget | serverWidget | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n5 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | record.load inside a loop; every call uses governance units |\n| 13 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |\n| 24 | loop_call | record.load inside a loop; every call uses governance units |\n| 28 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |\n| 36 | loop_call | record.load inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "37-no-version.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | - |\n| Script type | - |\n| Module scope | - |\n| Modules | 5 |\n| Entry points | beforeLoad, afterSubmit |\n\n## Header problems\n\nMissing @NApiVersion.\n\nMissing @NScriptType."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\nUnknown script type -: entry points cannot be checked."
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | yes |\n| N/runtime | runtime | no |\n| N/email | email | yes |\n| N/format | format | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n4 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | email.send inside a loop; every call uses governance units |\n| 13 | v1_api | nlapiLoadRecord is a SuiteScript 1.0 API |\n| 20 | loop_call | record.load inside a loop; every call uses governance units |\n| 24 | loop_call | search.lookupFields inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "38-no-type.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | - |\n| Module scope | SameAccount |\n| Modules | 3 |\n| Entry points | getInputData, summarize |\n\n## Header problems\n\nMissing @NScriptType."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\nUnknown script type -: entry points cannot be checked."
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/email | email | yes |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 15 | loop_call | email.send inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "39-public-scope.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | SDFInstallationScript |\n| Module scope | Public |\n| Modules | 5 |\n| Entry points | run |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| run | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/format | format | no |\n| N/ui/serverWidget | serverWidget | no |\n\n3 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | record.load inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 4 | module_scope | NModuleScope Public lets other accounts load this module; prefer SameAccount |"
+  }
+ },
+ "40-unknown-type.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | CustomGLPlugin |\n| Module scope | - |\n| Modules | 0 |\n| Entry points | customizeGlImpact |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\nUnknown script type CustomGLPlugin: entry points cannot be checked."
+  },
+  "reportModules": {
+   "exact": "# Modules\n\nNo modules are imported.\n\nEvery module is used."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "41-not-suitescript.js": {
+  "reportSummary": {
+   "startsWith": "# Script Summary\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportEntryPoints": {
+   "startsWith": "# Entry Points\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportModules": {
+   "startsWith": "# Modules\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportGovernance": {
+   "startsWith": "# Governance Risks\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportCompatibility": {
+   "startsWith": "# Version Compatibility\n\nThis file is not a SuiteScript 2.x script "
+  }
+ },
+ "42-empty.js": {
+  "reportSummary": {
+   "startsWith": "# Script Summary\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportEntryPoints": {
+   "startsWith": "# Entry Points\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportModules": {
+   "startsWith": "# Modules\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportGovernance": {
+   "startsWith": "# Governance Risks\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportCompatibility": {
+   "startsWith": "# Version Compatibility\n\nThis file is not a SuiteScript 2.x script "
+  }
+ },
+ "43-v1-script.js": {
+  "reportSummary": {
+   "startsWith": "# Script Summary\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportEntryPoints": {
+   "startsWith": "# Entry Points\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportModules": {
+   "startsWith": "# Modules\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportGovernance": {
+   "startsWith": "# Governance Risks\n\nThis file is not a SuiteScript 2.x script "
+  },
+  "reportCompatibility": {
+   "startsWith": "# Version Compatibility\n\nThis file is not a SuiteScript 2.x script "
+  }
+ },
+ "44-crlf.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.0 |\n| Script type | Restlet |\n| Module scope | - |\n| Modules | 3 |\n| Entry points | get, post, put, delete |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| get | yes |\n| put | yes |\n| post | yes |\n| delete | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/https | https | yes |\n| N/email | email | yes |\n\nEvery module is used."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n4 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 10 | loop_call | email.send inside a loop; every call uses governance units |\n| 20 | loop_call | search.lookupFields inside a loop; every call uses governance units |\n| 32 | loop_call | email.send inside a loop; every call uses governance units |\n| 42 | loop_call | search.lookupFields inside a loop; every call uses governance units |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\n5 findings.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 7 | es2015 | let needs @NApiVersion 2.1 |\n| 13 | es2015 | const needs @NApiVersion 2.1 |\n| 13 | es2015 | template literal needs @NApiVersion 2.1 |\n| 24 | es2015 | for...of needs @NApiVersion 2.1 |\n| 45 | es2015 | class needs @NApiVersion 2.1 |"
+  }
+ },
+ "45-bom.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | ClientScript |\n| Module scope | TargetAccount |\n| Modules | 4 |\n| Entry points | pageInit, fieldChanged, saveRecord |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| pageInit | yes |\n| fieldChanged | yes |\n| postSourcing | no |\n| sublistChanged | no |\n| lineInit | no |\n| validateField | no |\n| validateLine | no |\n| validateInsert | no |\n| validateDelete | no |\n| saveRecord | yes |\n| localizationContextEnter | no |\n| localizationContextExit | no |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/runtime | runtime | no |\n| N/ui/serverWidget | serverWidget | no |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "46-no-return.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | Suitelet |\n| Module scope | - |\n| Modules | 1 |\n| Entry points | - |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| onRequest | no |\n\nNo valid entry point: NetSuite rejects this script file."
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/log | log | yes |\n\nEvery module is used."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "47-unused-modules.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | ScheduledScript |\n| Module scope | - |\n| Modules | 4 |\n| Entry points | execute |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| execute | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | no |\n| N/search | search | yes |\n| N/email | email | no |\n| N/runtime | runtime | yes |\n\n2 unused modules."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\nNo governance risks found."
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ },
+ "48-large-mapreduce.js": {
+  "reportSummary": {
+   "exact": "# Script Summary\n\n| Item | Value |\n| --- | --- |\n| API version | 2.1 |\n| Script type | MapReduceScript |\n| Module scope | TargetAccount |\n| Modules | 5 |\n| Entry points | getInputData, reduce, summarize |\n\n## Header problems\n\nNo header problems."
+  },
+  "reportEntryPoints": {
+   "exact": "# Entry Points\n\n| Entry point | Exported |\n| --- | --- |\n| getInputData | yes |\n| map | no |\n| reduce | yes |\n| summarize | yes |"
+  },
+  "reportModules": {
+   "exact": "# Modules\n\n| Module | Variable | Used |\n| --- | --- | --- |\n| N/record | record | yes |\n| N/search | search | yes |\n| N/log | log | yes |\n| N/https | https | yes |\n| N/format | format | no |\n\n1 unused module."
+  },
+  "reportGovernance": {
+   "exact": "# Governance Risks\n\n1 finding.\n\n| Line | Rule | Finding |\n| ---: | --- | --- |\n| 23 | each_limit | run\\(\\).each\\(\\) stops after 4000 results; use runPaged\\(\\) for large searches |"
+  },
+  "reportCompatibility": {
+   "exact": "# Version Compatibility\n\nNo compatibility problems found."
+  }
+ }
+}

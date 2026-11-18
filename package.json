@@ -1,0 +1,218 @@
+{
+  "name": "ns-script-atlas",
+  "displayName": "NS Script Atlas",
+  "description": "SuiteScript 2.x files: script summary, entry point check, module usage. Pro: governance review and version compatibility check. Works offline.",
+  "version": "0.1.0",
+  "publisher": "SmallStepsStudio",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "icon": "media/icon.png",
+  "pricing": "Trial",
+  "homepage": "https://github.com/small-steps-studio/ns-script-atlas#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/small-steps-studio/ns-script-atlas"
+  },
+  "bugs": {
+    "url": "https://github.com/small-steps-studio/ns-script-atlas/issues"
+  },
+  "galleryBanner": {
+    "color": "#2d3a46",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other",
+    "Linters"
+  ],
+  "keywords": [
+    "suitescript",
+    "suitescript 2.1",
+    "suitescript 2.0",
+    "netsuite",
+    "netsuite development",
+    "governance",
+    "governance units",
+    "entry points",
+    "user event script",
+    "map reduce",
+    "suitelet",
+    "restlet",
+    "client script",
+    "scheduled script",
+    "n/record",
+    "n/search",
+    "runpaged",
+    "nlapi",
+    "erp",
+    "script review",
+    "sdf",
+    "offline"
+  ],
+  "main": "./src/extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "activationEvents": [],
+  "scripts": {
+    "test": "node scripts/run-tests.js",
+    "gate": "node scripts/release-gate.js",
+    "vscode:prepublish": "node scripts/release-gate.js --skip-tests",
+    "package": "npx --yes @vscode/vsce package --no-dependencies",
+    "package:local": "node scripts/package-local.js",
+    "check-vsix": "node scripts/check-vsix.js"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "nsScriptAtlas.showSummary",
+        "title": "NS Script Atlas: Show Script Summary",
+        "icon": "$(code)"
+      },
+      {
+        "command": "nsScriptAtlas.showEntryPoints",
+        "title": "NS Script Atlas: Show Entry Point Check"
+      },
+      {
+        "command": "nsScriptAtlas.showModules",
+        "title": "NS Script Atlas: Show Module Usage"
+      },
+      {
+        "command": "nsScriptAtlas.showGovernance",
+        "title": "NS Script Atlas: Show Governance Risks (Pro)"
+      },
+      {
+        "command": "nsScriptAtlas.showCompatibility",
+        "title": "NS Script Atlas: Show Version Compatibility (Pro)"
+      },
+      {
+        "command": "nsScriptAtlas.openSample",
+        "title": "NS Script Atlas: Open Sample File"
+      },
+      {
+        "command": "nsScriptAtlas.openWalkthrough",
+        "title": "NS Script Atlas: Open Walkthrough"
+      },
+      {
+        "command": "nsScriptAtlas.showDocumentation",
+        "title": "NS Script Atlas: Show Documentation"
+      },
+      {
+        "command": "nsScriptAtlas.reportProblem",
+        "title": "NS Script Atlas: Report A Problem"
+      },
+      {
+        "command": "nsScriptAtlas.buyPro",
+        "title": "NS Script Atlas: Buy Pro"
+      },
+      {
+        "command": "nsScriptAtlas.enterKey",
+        "title": "NS Script Atlas: Enter Licence Key"
+      },
+      {
+        "command": "nsScriptAtlas.licenceStatus",
+        "title": "NS Script Atlas: Show Licence Status"
+      },
+      {
+        "command": "nsScriptAtlas.removeLicence",
+        "title": "NS Script Atlas: Remove Licence From This Machine"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "nsScriptAtlas.showSummary",
+          "when": "resourceExtname == .js && resourcePath =~ /[\\\\/]SuiteScripts[\\\\/]/",
+          "group": "navigation@90"
+        }
+      ]
+    },
+    "walkthroughs": [
+      {
+        "id": "gettingStarted",
+        "title": "Get started with NS Script Atlas",
+        "description": "Open a sample script, see its summary, entry points and module usage, and try the Pro governance review and version compatibility check in the free 14-day trial.",
+        "steps": [
+          {
+            "id": "nsScriptAtlas.step.openSample",
+            "title": "Open a sample file",
+            "description": "NS Script Atlas reads SuiteScript 2.x files: the define() modules with a JSDoc header that sets the API version and script type. The sample is an invented user event script with typical governance and compatibility problems, so every report has something to show. Open it to follow along, or open a script of your own.\n[Open Sample File](command:nsScriptAtlas.openSample)",
+            "media": {
+              "markdown": "media/walkthrough/open-sample.md"
+            },
+            "completionEvents": [
+              "onCommand:nsScriptAtlas.openSample"
+            ]
+          },
+          {
+            "id": "nsScriptAtlas.step.free",
+            "title": "Run Show Script Summary",
+            "description": "The script at a glance: API version, script type, module scope, number of modules, exported entry points and header problems. The report opens as a new Markdown document; your file is not changed.\n[Show Script Summary](command:nsScriptAtlas.showSummary)",
+            "media": {
+              "markdown": "media/walkthrough/free.md"
+            },
+            "completionEvents": [
+              "onCommand:nsScriptAtlas.showSummary"
+            ]
+          },
+          {
+            "id": "nsScriptAtlas.step.more",
+            "title": "Use the other free reports",
+            "description": "Every free report works without a key, an account or a network connection: Show Entry Point Check, Show Module Usage.\n[Show Entry Point Check](command:nsScriptAtlas.showEntryPoints)\n[Show Module Usage](command:nsScriptAtlas.showModules)",
+            "media": {
+              "markdown": "media/walkthrough/more.md"
+            },
+            "completionEvents": [
+              "onCommand:nsScriptAtlas.showEntryPoints",
+              "onCommand:nsScriptAtlas.showModules"
+            ]
+          },
+          {
+            "id": "nsScriptAtlas.step.pro",
+            "title": "Try Pro free for 14 days",
+            "description": "The first Pro command you run starts a free 14-day trial on this computer, with no key and no network: Show Governance Risks, Show Version Compatibility.\n[Show Governance Risks](command:nsScriptAtlas.showGovernance)",
+            "media": {
+              "markdown": "media/walkthrough/pro.md"
+            },
+            "completionEvents": [
+              "onCommand:nsScriptAtlas.showGovernance",
+              "onCommand:nsScriptAtlas.showCompatibility"
+            ]
+          },
+          {
+            "id": "nsScriptAtlas.step.licence",
+            "title": "Licence and help",
+            "description": "Buy Pro (Personal USD 19, Business USD 39 per user), enter a key, see the licence status, or report a problem.\n[Show Licence Status](command:nsScriptAtlas.licenceStatus)\n[Report A Problem](command:nsScriptAtlas.reportProblem)",
+            "media": {
+              "markdown": "media/walkthrough/licence.md"
+            },
+            "completionEvents": [
+              "onCommand:nsScriptAtlas.licenceStatus"
+            ]
+          }
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "NS Script Atlas",
+      "properties": {
+        "nsScriptAtlas.maxFileSizeMB": {
+          "type": "number",
+          "default": 50,
+          "minimum": 0.1,
+          "maximum": 50,
+          "markdownDescription": "Largest file (in MB) a report reads, up to 50 MB (VS Code passes files only up to 50 MB to extensions). Larger files are refused with a message."
+        },
+        "nsScriptAtlas.openReportsAsPreview": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Open each report in the Markdown preview as well as in a new editor."
+        }
+      }
+    }
+  }
+}
